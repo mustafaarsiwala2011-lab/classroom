@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Classroom Hub",
+  "description": "A collaborative classroom hub with live chat, meme master controls, failed words & slips vault, class notes with quick search, settings with dark mode, and a birthdays & calendar.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

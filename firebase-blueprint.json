@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "EntryRequest": {
+      "title": "EntryRequest",
+      "description": "Student entry authorization request for gatekeeper review",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "username": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "trNo": { "type": "string" },
+        "phone": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "requestedAt": { "type": "string" },
+        "approvedAt": { "type": "string" },
+        "approvedBy": { "type": "string" },
+        "permissionsRequested": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["userId", "username", "status", "requestedAt"]
+    },
+    "User": {
+      "title": "User",
+      "description": "Classroom user and student profile data",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "username": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "trNo": { "type": "string" },
+        "phone": { "type": "string" },
+        "birthday": { "type": "string" },
+        "waras": { "type": "string" },
+        "city": { "type": "string" },
+        "roomNo": { "type": "string" },
+        "bio": { "type": "string" },
+        "avatarColor": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "isApproved": { "type": "boolean" },
+        "isMemeMaster": { "type": "boolean" },
+        "isFailMaster": { "type": "boolean" },
+        "role": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "username"]
+    }
+  },
+  "firestore": {
+    "/entryRequests/{requestId}": {
+      "schema": "EntryRequest",
+      "description": "Collection of entry requests for admission and gatekeeper approval"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and account status"
+    }
+  }
+}

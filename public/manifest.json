@@ -1,0 +1,24 @@
+{
+  "short_name": "ClassroomHub",
+  "name": "Classroom Hub",
+  "description": "A collaborative classroom application with live chat, meme master controls, class notes with quick search, settings with dark mode, and a birthdays & anniversaries calendar.",
+  "icons": [
+    {
+      "src": "./icon-512.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "display": "standalone",
+  "orientation": "portrait"
+}
