@@ -1,0 +1,20 @@
+{
+  "firestore": {
+    "database": "ai-studio-classroomhub-faa9ed0f-6de5-44b0-9bed-4d3a95a41f58",
+    "rules": "firestore.rules"
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
